@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-const SkillModel = require("../Models/skills");
 const {
   addSkillContoller,
   updateSkillData,
   deleteSkillController,
   getAllSkillsController,
+  getSingleSkillController,
 } = require("../controllers/skills");
+
+router.get("/getSingleSkill/:id", getSingleSkillController);
 
 router.get("/getAll", getAllSkillsController);
 
