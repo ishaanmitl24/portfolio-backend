@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const projectModel = new mongoose.model(
-  "User",
+  "Project",
   new Schema({
     projectName: {
       type: String,
@@ -29,7 +29,7 @@ const projectModel = new mongoose.model(
       required: true,
     },
   }),
-  "User"
+  "Project"
 );
 
 module.exports = projectModel;

@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 
 const skillsRoutes = require("./routes/skills");
 const projectRoutes = require("./routes/projects");
+const userRoutes = require("./routes/user");
 const workRoutes = require("./routes/work");
 const { PORT } = require("./config");
 const connectMONGODB = require("./connectDb");
@@ -11,6 +12,7 @@ const connectMONGODB = require("./connectDb");
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use('/user', userRoutes);
 app.use("/skills", skillsRoutes);
 app.use("/projects", projectRoutes);
 app.use("/work", workRoutes);

@@ -12,6 +12,22 @@ const user = new mongoose.model(
       type: String,
       required: true,
     },
+    githubLink:{
+      type: String,
+      required: true,
+    },
+    linkedinLink:{
+      type: String,
+      required: true,
+    },
+    phoneNumber: {
+      type: String,
+      required: true,
+    },
+    heading:{
+      type: String,
+      required: true,
+    },
     description: {
       type: String,
       required: true,
